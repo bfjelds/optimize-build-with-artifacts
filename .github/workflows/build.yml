@@ -23,7 +23,7 @@ jobs:
         echo $TIMESTAMP >> /tmp/build.txt
         echo "${{ github.sha }}"
         echo $TIMESTAMP
-        echo "12345"
+        echo "123456"
     - name: Upload Agent container as artifact
       uses: actions/upload-artifact@v2
       with:

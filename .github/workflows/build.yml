@@ -19,7 +19,9 @@ jobs:
       run: |
         TIMESTAMP=$(date +%x_%H:%M:%S:%N)
         echo "${{ matrix.arch }}" > /tmp/build.txt
+        echo "${{ github.sha }}" >> /tmp/build.txt
         echo $TIMESTAMP >> /tmp/build.txt
+        echo "${{ github.sha }}"
         echo $TIMESTAMP
     - name: Upload Agent container as artifact
       uses: actions/upload-artifact@v2

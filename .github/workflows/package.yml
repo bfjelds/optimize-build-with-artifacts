@@ -23,7 +23,7 @@ jobs:
       with:
         workflow: ${{ github.event.workflow_run.workflow_id }}
         workflow_conclusion: success
-        commit: ${{ github.sha }}
+        commit: ${{ github.event.workflow_run.head_sha }}
         name: build-${{ matrix.arch }}-output
         path: /tmp
     - name: Use build output

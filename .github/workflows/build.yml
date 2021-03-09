@@ -1,0 +1,24 @@
+name: build
+on: push
+
+jobs:
+
+  per-arch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch:
+          - arm64v8
+          - arm32v7
+          - amd64
+
+    steps:
+    - name: Fake build
+      run: echo "${{ matrix.arch }}" > /tmp/build.txt
+    - name: Upload Agent container as artifact
+      if: startsWith(github.event_name, 'pull_request')
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-${{ matrix.arch }}-output
+        path: /tmp/build.txt
+        

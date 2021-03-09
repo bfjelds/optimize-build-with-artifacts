@@ -1,4 +1,4 @@
-name: build
+name: build them all
 on:
   push:
   workflow_dispatch:

@@ -2,7 +2,7 @@ name: package
 
 on:
   workflow_run:
-    workflows: ["build"]
+    workflows: ["build them all"]
     types: 
       - completed
 

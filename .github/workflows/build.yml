@@ -18,7 +18,7 @@ jobs:
     - name: Fake build
       run: |
         echo "${{ matrix.arch }}" > /tmp/build.txt
-        printenv >> /tmp/build.txt
+        date +%x_%H:%M:%S:%N >> /tmp/build.txt
     - name: Upload Agent container as artifact
       uses: actions/upload-artifact@v2
       with:

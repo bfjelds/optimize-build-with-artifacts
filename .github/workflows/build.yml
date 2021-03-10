@@ -1,4 +1,4 @@
-name: build them all foo
+name: build them all fo2
 on:
   push:
   workflow_dispatch:

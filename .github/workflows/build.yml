@@ -1,5 +1,6 @@
 name: build them all fo1
 on:
+  pull_request:
   push:
   workflow_dispatch:
 

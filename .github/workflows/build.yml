@@ -1,4 +1,4 @@
-name: build them all fo1
+name: build them all fo2
 on:
   pull_request:
   push:

@@ -2,12 +2,12 @@ name: package
 
 on:
   workflow_run:
-    workflows: ["build them all"]
+    workflows: ["build them all fo1"]
     types: 
       - completed
 
 jobs:
-  package:
+  package-fo1:
     runs-on: ubuntu-18.04
     if: ${{ github.event.workflow_run.conclusion == 'success' }} 
     strategy:

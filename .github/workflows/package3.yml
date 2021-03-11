@@ -10,7 +10,10 @@ jobs:
   new-bits:
     runs-on: ubuntu-18.04
     steps:
-    - run: echo "HI!"
+    - run: |
+        echo "HI!"
+        printenv
+        echo ${{ github.event.workflow_run }}
     
   package-fo3:
     runs-on: ubuntu-18.04

@@ -13,7 +13,7 @@ jobs:
     - run: |
         echo "HI!"
         printenv
-        echo ${{ github.event.workflow_run }}
+        echo ${{ toJSON(github) }}
     
   package-fo3:
     runs-on: ubuntu-18.04

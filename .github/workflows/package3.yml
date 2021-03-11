@@ -10,10 +10,13 @@ jobs:
   new-bits:
     runs-on: ubuntu-18.04
     steps:
-    - run: |
+    - name: Foo
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
+      run: |
         echo "HI!"
         printenv
-        echo ${{ toJSON(github) }}
+        echo "$GITHUB_CONTEXT"
     
   package-fo3:
     runs-on: ubuntu-18.04
